@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Para os seus olhos castanhos</title>
+<style>
+:root{color-scheme:light dark;--bg:#16070f;--card:#25101b;--text:#fff1f5;--muted:#e9cbd5;--rose:#ff9ab5;--line:#713249}
+*{box-sizing:border-box}html,body{margin:0;min-height:100%;font-family:Georgia,'Times New Roman',serif}body{background:var(--bg);color:var(--text)}
+#app{min-height:100vh;background:radial-gradient(circle at 50% 10%,#5b1833 0,#260d1a 36%,#10050b 100%);overflow:hidden;position:relative}
+.sparkles{position:absolute;inset:0;pointer-events:none}.sparkles i{position:absolute;width:4px;height:4px;background:#ffd9e4;border-radius:50%;box-shadow:0 0 12px #fff;animation:twinkle 2.5s infinite ease-in-out}.sparkles i:nth-child(1){left:12%;top:18%;animation-delay:.2s}.sparkles i:nth-child(2){left:82%;top:25%;animation-delay:1s}.sparkles i:nth-child(3){left:72%;top:72%;animation-delay:1.7s}.sparkles i:nth-child(4){left:21%;top:78%;animation-delay:2.1s}.sparkles i:nth-child(5){left:91%;top:53%;animation-delay:.7s}@keyframes twinkle{50%{opacity:.15;transform:scale(.35)}100%{opacity:1}}
+main{min-height:100vh;display:grid;place-items:center;padding:40px 20px;position:relative}.card{width:min(760px,100%);text-align:center;padding:34px 28px 40px;border:1px solid var(--line);border-radius:28px;background:rgba(30,9,19,.72);box-shadow:0 24px 80px rgba(0,0,0,.45);backdrop-filter:blur(8px)}
+.kicker{letter-spacing:.28em;text-transform:uppercase;font:600 11px/1.4 system-ui,sans-serif;color:#ffadc2}.title{font-size:clamp(36px,7vw,70px);line-height:.95;margin:10px 0 28px;font-weight:400}.title span{color:var(--rose)}
+.rose-wrap{height:350px;display:grid;place-items:center;margin-bottom:8px;position:relative}.rose-scene{width:min(290px,72vw);height:340px;position:relative;animation:sway 5s ease-in-out infinite;transform-origin:50% 100%;filter:drop-shadow(0 20px 24px rgba(0,0,0,.35))}
+.rose-svg{width:100%;height:100%;overflow:visible}.petal{transform-box:fill-box;transform-origin:center;animation:breathe 4s ease-in-out infinite}.petal:nth-of-type(2){animation-delay:.12s}.petal:nth-of-type(3){animation-delay:.24s}.petal:nth-of-type(4){animation-delay:.36s}.petal:nth-of-type(5){animation-delay:.48s}.petal:nth-of-type(6){animation-delay:.6s}.petal:nth-of-type(7){animation-delay:.72s}.petal:nth-of-type(8){animation-delay:.84s}@keyframes sway{0%,100%{transform:rotate(-1.7deg) translateY(2px)}50%{transform:rotate(2deg) translateY(-6px)}}@keyframes breathe{0%,100%{transform:scale(1)}50%{transform:scale(1.025)}}
+.rose-glow{animation:glow 3s ease-in-out infinite}@keyframes glow{50%{opacity:.82;filter:drop-shadow(0 0 15px rgba(255,58,89,.48))}}
+.poem{font-size:clamp(18px,2.8vw,23px);line-height:1.72;color:var(--muted);max-width:620px;margin:0 auto}.poem em{color:#fff;font-style:normal}.signature{margin-top:28px;color:#ff9ab5;font-size:17px}.heart{display:inline-block;animation:beat 1.2s infinite}@keyframes beat{50%{transform:scale(1.25)}}
+button{margin-top:25px;border:1px solid #9d3f5e;background:#54162d;color:#ffeaf1;border-radius:999px;padding:11px 18px;font:600 13px system-ui,sans-serif;cursor:pointer}button:hover{background:#6b1c39}.hidden{display:none}#secret{color:#ffd8e4;font-style:italic;margin:18px auto 0;max-width:560px;line-height:1.6;animation:appear .8s ease}@keyframes appear{from{opacity:0;transform:translateY(8px)}to{opacity:1;transform:none}}
+@media(max-width:520px){.card{padding:28px 18px 34px}.rose-wrap{height:270px}.rose-scene{height:270px}.poem{font-size:18px}.title{margin-bottom:14px}}
+</style></head>
+<body><div id="app"><div class="sparkles"><i></i><i></i><i></i><i></i><i></i></div><main><section class="card">
+<div class="kicker">um pequeno pedaço do que sinto</div>
+<h1 class="title">Para os seus <span>olhos castanhos</span></h1>
+<div class="rose-wrap" aria-label="Rosa vermelha desenhada e animada">
+<div class="rose-scene">
+<svg class="rose-svg" viewBox="0 0 300 350" role="img" aria-label="Uma rosa vermelha animada">
+<defs>
+<linearGradient id="stem" x1="0" y1="0" x2="1" y2="0"><stop offset="0" stop-color="#173d22"/><stop offset=".55" stop-color="#2d6b35"/><stop offset="1" stop-color="#173d22"/></linearGradient>
+<radialGradient id="red" cx="42%" cy="30%"><stop offset="0" stop-color="#ff4f67"/><stop offset=".5" stop-color="#d51635"/><stop offset="1" stop-color="#790b20"/></radialGradient>
+<radialGradient id="darkred"><stop offset="0" stop-color="#8f0d25"/><stop offset="1" stop-color="#450512"/></radialGradient>
+<linearGradient id="leaf" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#4e944b"/><stop offset="1" stop-color="#153b22"/></linearGradient>
+</defs>
+<!-- stem and leaves -->
+<path d="M151 176 C148 230 151 284 157 344" fill="none" stroke="url(#stem)" stroke-width="9" stroke-linecap="round"/>
+<path d="M150 263 C117 238 91 239 67 257 C91 281 118 285 151 274Z" fill="url(#leaf)" stroke="#183d23" stroke-width="2"/>
+<path d="M154 299 C184 271 210 270 235 284 C216 310 188 318 154 309Z" fill="url(#leaf)" stroke="#183d23" stroke-width="2"/>
+<path d="M150 225 C123 207 105 209 87 222 C108 239 129 241 151 234Z" fill="#326f37" opacity=".95"/>
+<path d="M157 318 C143 299 127 294 111 301 C122 321 138 330 157 327Z" fill="#24592c"/>
+<!-- sepals -->
+<path d="M151 190 C135 181 126 165 130 151 C143 158 151 159 157 157 C163 168 171 171 183 166 C181 184 170 195 151 190Z" fill="#2f6f35"/>
+<!-- outer petals -->
+<g class="rose-glow">
+<path class="petal" d="M151 170 C111 174 81 155 76 119 C72 87 94 55 127 45 C122 72 132 91 151 102 C169 83 184 69 207 67 C234 79 249 105 242 137 C235 169 199 184 151 170Z" fill="url(#red)"/>
+<path class="petal" d="M83 128 C69 105 75 78 98 60 C115 47 132 45 145 51 C124 71 120 91 130 109 C113 105 97 111 83 128Z" fill="#b80e2b"/>
+<path class="petal" d="M143 50 C159 30 189 29 207 45 C220 57 221 73 214 89 C197 76 180 72 164 83 C161 69 154 58 143 50Z" fill="#d91b39"/>
+<path class="petal" d="M205 45 C235 52 250 74 249 98 C248 117 238 130 226 139 C230 113 218 94 198 83 C207 70 210 58 205 45Z" fill="#c6102e"/>
+<path class="petal" d="M77 119 C66 143 77 168 103 181 C121 190 140 188 153 180 C129 167 115 151 112 130 C99 134 88 130 77 119Z" fill="#8f0b24"/>
+<path class="petal" d="M226 139 C219 160 201 178 175 184 C199 190 225 181 238 163 C247 151 249 137 244 125 C239 132 233 136 226 139Z" fill="#9e0b24"/>
+<!-- inner petals -->
+<path class="petal" d="M116 115 C101 92 112 69 137 61 C155 55 174 64 180 78 C161 76 146 86 143 101 C137 99 126 105 116 115Z" fill="#ef2948"/>
+<path class="petal" d="M180 78 C203 77 218 91 220 109 C221 125 211 138 198 146 C201 127 192 112 177 105 C183 96 184 87 180 78Z" fill="#b90d2b"/>
+<path class="petal" d="M143 101 C151 86 169 82 184 91 C194 98 196 111 190 121 C179 110 166 108 155 116 C151 110 148 105 143 101Z" fill="url(#darkred)"/>
+<path class="petal" d="M155 116 C166 108 181 113 186 124 C190 134 185 143 176 148 C176 136 169 129 157 128 C155 124 154 120 155 116Z" fill="#71071c"/>
+<path d="M151 174 C127 165 116 149 118 130 C120 112 135 101 151 100 C143 120 148 139 166 149 C161 160 157 169 151 174Z" fill="#c41130" opacity=".9"/>
+<path d="M166 149 C186 139 198 125 198 108 C214 121 214 143 201 157 C191 168 174 174 158 172Z" fill="#7f081f" opacity=".9"/>
+</g>
+<!-- subtle highlight -->
+<path d="M105 82 C114 65 128 57 141 56" fill="none" stroke="#ff8a9b" stroke-width="5" stroke-linecap="round" opacity=".45"/>
+</svg></div></div>
+<div class="poem">Se eu pudesse morar em algum lugar,<br>eu escolheria o brilho dos seus olhos.<br><br>Porque nos seus <em>olhos castanhos</em><br>existe um céu que eu nunca consigo explicar:<br>um lugar quente, bonito e tranquilo,<br>onde até o meu coração aprende a ficar.<br><br>E quando você olha para mim,<br>parece que o mundo diminui o volume,<br>as horas esquecem de passar<br>e tudo que importa cabe naquele instante.<br><br>Talvez você nem perceba,<br>mas existe uma delicadeza no seu olhar<br>que faz qualquer palavra parecer pequena.<br><br>Então, se algum dia eu me perder,<br>não precisa me procurar muito...<br><br><em>é só deixar seus olhos castanhos me guiarem.</em></div>
+<div class="signature">feito com carinho <span class="heart">♥</span></div>
+<button id="more">clique aqui, se quiser mais uma coisa...</button><p id="secret" class="hidden">Seus olhos não são só castanhos. São a minha cor favorita quando você sorri.</p>
+</section></main></div><script>document.getElementById('more').onclick=()=>{document.getElementById('secret').classList.remove('hidden');document.getElementById('more').textContent='♥';}</script></body></html>
